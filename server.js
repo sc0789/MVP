@@ -30,9 +30,8 @@ var myMember = mongoose.model('Info', new mongoose.Schema({ "name": String, "tim
 
 //routers
 
-app.get('/', function(req,res){
-	res.sendFile(__dirname + '/Client/index.html')
-});
+
+app.use(express.static(path.join(__dirname, 'client')));
 
 
 // app.get('/api/', function(req,res){
